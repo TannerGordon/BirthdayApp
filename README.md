@@ -1,4 +1,4 @@
-# Birthday!
+# Birthday! Mobile App
 
 Coming soon to the AppStore!!!
 
