@@ -8,7 +8,6 @@
 
 <h4 align="center"><b>Birthday!</b> is a mobile app that will ensure that you never miss a friend's birthday again</a>.
 <br>
-It is written in C++ with portability in mind, and we actively maintain builds for Windows and Linux.
 </h4>
 
 # How it Works
@@ -17,4 +16,4 @@ Upon downloading the app, you enter your name and your birthday. Then, you decid
 
 # Inspiration for the app
 
-I am terrible with remembering my friends' birthdays and I've always wanted an app that would notify me when their birthday is coming up.
+I am pretty bad at remembering my friends' birthdays and I've always wanted an app that would remind me when a friend's brithday is coming up!
