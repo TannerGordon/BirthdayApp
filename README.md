@@ -12,7 +12,9 @@
 
 # How it Works
 
-Upon downloading the app, you enter your name and your birthday. Then, you decide when you would like to receive notifications for your friends' birthdays (ex. the day of, one day before, one week before, etc.). Finally, you can sync your contacts, and anyone who already has the app will be automatically added and you won't have to enter their birthday!
+Upon downloading the app, you enter your name and your birthday. Then, you decide when you would like to receive notifications for your friends' birthdays (ex. the day of, one day before, one week before, etc.). Finally, you can sync your contacts, and anyone who already has the app will be automatically added so won't have to manually enter their birthday!
+
+At the beginning of each month, Birthday! will send you a notification, letting you know which of your friends have birthdays that month. Then, Birthday! will send you a notification on the day of their birthday and/or if you prefaced to be notified a certain period of time prior to their birthday.
 
 # Inspiration for the app
 
