@@ -19,3 +19,8 @@ At the beginning of each month, Birthday! will send you a notification, letting 
 # Inspiration for the app
 
 I am pretty bad at remembering my friends' birthdays and I've always wanted an app that would remind me when a friend's brithday is coming up!
+
+
+<h1 align="center">
+  Coming soon to the App Store!
+</h1>
