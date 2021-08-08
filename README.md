@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://yuzu-emu.org/"><img src="https://github.com/TannerGordon/BirthdayApp/blob/master/assets/images/icon_round.png" alt="yuzu" width="200"></a>
+  <a><img src="https://github.com/TannerGordon/BirthdayApp/blob/master/assets/images/icon_round.png" alt="Coming soon to the App Store!" width="500"></a>
   <br>
   <b>yuzu</b>
   <br>
