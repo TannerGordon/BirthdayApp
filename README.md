@@ -1,6 +1,18 @@
+<h1 align="center">
+  <br>
+  <a href="https://yuzu-emu.org/"><img src="https://github.com/TannerGordon/BirthdayApp/blob/master/assets/images/icon_round.png" alt="yuzu" width="200"></a>
+  <br>
+  <b>yuzu</b>
+  <br>
+</h1>
+
+
+
 # Birthday! Mobile App
 
 Coming soon to the AppStore!!!
+
+
 
 
 ---
