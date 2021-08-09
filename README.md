@@ -20,7 +20,10 @@ At the beginning of each month, Birthday! will send you a notification, letting 
 
 I am pretty bad at remembering my friends' birthdays and I've always wanted an app that would remind me when a friend's brithday is coming up!
 
-
 <h1 align="center">
   Coming soon to the App Store!
 </h1>
+
+# Screenshots
+
+<a><img src="https://github.com/TannerGordon/BirthdayApp/blob/master/assets/images/screenshot1.png" alt="Start Page Screenshot" width="500"></a>
