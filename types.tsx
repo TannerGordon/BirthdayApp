@@ -8,7 +8,11 @@ export type RootStackParamList = {
   NotFound: undefined;
   LoginNavigator: undefined;
   TabOneScreen: undefined;
-  StartPage: undefined;
+  FirstName: undefined;
+  Welcome: undefined;
+  LastName: undefined;
+  PhoneNumber: undefined;
+  Birthday: undefined;
 };
 
 export type BottomTabParamList = {

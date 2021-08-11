@@ -6,7 +6,11 @@ import { RootStackParamList } from "../types";
 import LoginNavigator from "./LoginNavigator";
 import BottomTabNavigator from "./BottomTabNavigator";
 import NotFoundScreen from "../screens/NotFoundScreen";
-import { StartPage } from "../screens/StartPage";
+import { Welcome } from "../screens/StartScreens/Welcome";
+import { FirstName } from "../screens/StartScreens/FirstName";
+import { LastName } from "../screens/StartScreens/LastName";
+import { PhoneNumber } from "../screens/StartScreens/PhoneNumber";
+import { Birthday } from "../screens/StartScreens/Birthday";
 import TabOneScreen from "../screens/TabOneScreen";
 import { Title } from "react-native-paper";
 // import AppNavigator from "./AppNavigator";
@@ -63,8 +67,8 @@ export const RootNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="StartPage"
-        component={StartPage}
+        name="Welcome"
+        component={Welcome}
         options={{
           title: TITLE,
           headerBackTitle: "",
@@ -78,6 +82,71 @@ export const RootNavigator = () => {
           headerStyle: { elevation: 0, shadowColor: "transparent" },
         }}
       />
+      <Stack.Screen
+        name="FirstName"
+        component={FirstName}
+        options={{
+          title: TITLE,
+          headerBackTitle: "",
+          headerTitleStyle: {
+            // fontWeight: "bold",
+            fontSize: 30,
+            fontFamily: "Marker Felt",
+          },
+          headerTintColor: "#E960FF",
+          headerStatusBarHeight: 40,
+          headerStyle: { elevation: 0, shadowColor: "transparent" },
+        }}
+      />
+            <Stack.Screen
+        name="LastName"
+        component={LastName}
+        options={{
+          title: TITLE,
+          headerBackTitle: "",
+          headerTitleStyle: {
+            // fontWeight: "bold",
+            fontSize: 30,
+            fontFamily: "Marker Felt",
+          },
+          headerTintColor: "#E960FF",
+          headerStatusBarHeight: 40,
+          headerStyle: { elevation: 0, shadowColor: "transparent" },
+        }}
+      />
+            <Stack.Screen
+        name="PhoneNumber"
+        component={PhoneNumber}
+        options={{
+          title: TITLE,
+          headerBackTitle: "",
+          headerTitleStyle: {
+            // fontWeight: "bold",
+            fontSize: 30,
+            fontFamily: "Marker Felt",
+          },
+          headerTintColor: "#E960FF",
+          headerStatusBarHeight: 40,
+          headerStyle: { elevation: 0, shadowColor: "transparent" },
+        }}
+      />
+            <Stack.Screen
+        name="Birthday"
+        component={Birthday}
+        options={{
+          title: TITLE,
+          headerBackTitle: "",
+          headerTitleStyle: {
+            // fontWeight: "bold",
+            fontSize: 30,
+            fontFamily: "Marker Felt",
+          },
+          headerTintColor: "#E960FF",
+          headerStatusBarHeight: 40,
+          headerStyle: { elevation: 0, shadowColor: "transparent" },
+        }}
+      />
+      
       <Stack.Screen name="TabOneScreen" component={TabOneScreen} />
       {/* <Stack.Screen name="LoginNavigator" component={LoginNavigator} /> */}
       {/* <Stack.Screen name="Root" component={BottomTabNavigator} /> */}

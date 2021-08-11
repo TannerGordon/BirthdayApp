@@ -19,28 +19,28 @@ import { Ionicons } from "@expo/vector-icons";
 //   navigation: StartPageNavigationProp;
 // };
 
-export const StartPage = ({ navigation }: any) => {
+export const Birthday = ({ navigation }: any) => {
   return (
     <View style={styles.container}>
       <View style={styles.screenNumberContainer}>
+        <View style={styles.screenNumberFalse} />
+        <View style={styles.screenNumberFalse} />
+        <View style={styles.screenNumberFalse} />
         <View style={styles.screenNumberTrue} />
-        <View style={styles.screenNumberFalse} />
-        <View style={styles.screenNumberFalse} />
-        <View style={styles.screenNumberFalse} />
       </View>
-      <Text style={styles.subtitle}>welcome</Text>
-      <Text style={styles.question}>What is your first name?</Text>
+      <Text style={styles.subtitle}>birthday!</Text>
+      <Text style={styles.question}>What is your birthday?</Text>
       <View style={styles.answer}>
         <TextInput
           style={styles.answerText}
-          placeholder="First name"
+          placeholder="Birthday"
           placeholderTextColor="#666666"
         />
       </View>
       <TouchableOpacity style={styles.nextBtn}>
-        <Ionicons name="chevron-forward-outline" size={30} color="#E960FF" />
+        <Ionicons name="checkmark-outline" size={30} color="#E960FF" />
       </TouchableOpacity>
-      <Text style={styles.nextBtnText}>Next</Text>
+      <Text style={styles.nextBtnText}>Finish</Text>
     </View>
   );
 };
@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    // justifyContent: "space-evenly",
     alignItems: "center",
     backgroundColor: "#fff",
     paddingHorizontal: 30,
@@ -58,10 +57,8 @@ const styles = StyleSheet.create({
 
   screenNumberContainer: {
     flexDirection: "row",
-    // paddingVertical: 20,
     paddingTop: 20,
     paddingBottom: 10,
-    // marginTop: -50,
   },
 
   screenNumberTrue: {
@@ -71,13 +68,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 3,
     backgroundColor: "#E960FF",
     borderWidth: 1.5,
-    // shadowColor: "#000",
-    // shadowOpacity: 0.25,
-    // shadowRadius: 5,
-    // shadowOffset: {
-    //   width: 0,
-    //   height: 0,
-    // },
   },
 
   screenNumberFalse: {
@@ -88,13 +78,6 @@ const styles = StyleSheet.create({
     borderColor: "#000",
     backgroundColor: "white",
     borderWidth: 1.5,
-    // shadowColor: "#000",
-    // shadowOpacity: 0.25,
-    // shadowRadius: 5,
-    // shadowOffset: {
-    //   width: 0,
-    //   height: 0,
-    // },
   },
 
   subtitle: {
@@ -109,25 +92,20 @@ const styles = StyleSheet.create({
 
   question: {
     fontSize: 30,
-    // marginTop: 30,
     alignSelf: "flex-start",
+    fontFamily: "Futura",
     // fontFamily: "Avenir",
     // fontFamily: "Al Nile",
     // fontFamily: "Futura",
     // fontFamily: "Georgia",
-    fontFamily: "Futura",
     // fontFamily: "Futura-CondensedExtraBold",
     // fontFamily: "Futura-Medium",
     fontWeight: "bold",
-    // letterSpacing: 0.8,
     color: "#282828",
   },
 
   answer: {
     marginTop: 80,
-    // position: "absolute",
-    // top: "40%",
-    // borderWidth: 1,
     width: "100%",
     height: 60,
     borderRadius: 10,
@@ -149,21 +127,12 @@ const styles = StyleSheet.create({
 
   nextBtn: {
     borderRadius: 100,
-    // position: "absolute",
-    // top: "67%",
     marginTop: 90,
     backgroundColor: "#282828",
     width: 65,
     height: 65,
     justifyContent: "center",
     alignItems: "center",
-    // shadowColor: "#000",
-    // shadowOffset: {
-    //   width: 0,
-    //   height: 0,
-    // },
-    // shadowOpacity: 0.5,
-    // shadowRadius: 6,
   },
 
   nextBtnText: {
