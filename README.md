@@ -26,5 +26,5 @@ I am pretty bad at remembering my friends' birthdays and I've always wanted an a
 
 # Screenshots
 
-<a><img src="https://github.com/TannerGordon/BirthdayApp/blob/master/assets/images/welcome.png" alt="Welcome Page" width="300"></a>
-<a><img src="https://github.com/TannerGordon/BirthdayApp/blob/master/assets/images/firstname.png" alt="Welcome Page" width="300"></a>
+<a><img src="https://github.com/TannerGordon/BirthdayApp/blob/master/assets/images/screenshots/welcome.png" alt="Welcome Page" width="300"></a>
+<a><img src="https://github.com/TannerGordon/BirthdayApp/blob/master/assets/images/screenshots/firstname.png" alt="First Name Page" width="300"></a>
