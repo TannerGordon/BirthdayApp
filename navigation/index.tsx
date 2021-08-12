@@ -77,10 +77,17 @@ export const RootNavigator = () => {
             // fontWeight: "bold",
             fontSize: 30,
             fontFamily: "Marker Felt",
+            // textShadowColor: "white",
+            // textShadowColor: "white",
+            // textShadowRadius: 8,
+            // letterSpacing: 3,
           },
           headerTintColor: "#E960FF",
+          // headerTintColor: "black", 
           headerStatusBarHeight: 40,
           headerStyle: { elevation: 0, shadowColor: "transparent" },
+          headerTransparent: true,
+          
         }}
       />
       <Stack.Screen
