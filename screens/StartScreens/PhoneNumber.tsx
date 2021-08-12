@@ -27,6 +27,7 @@ export const PhoneNumber = ({ navigation }: any) => {
         <View style={styles.screenNumberFalse} />
         <View style={styles.screenNumberTrue} />
         <View style={styles.screenNumberFalse} />
+        <View style={styles.screenNumberFalse} />
       </View>
       <Text style={styles.subtitle}>cellular device</Text>
       <Text style={styles.question}>What is your phone number?</Text>

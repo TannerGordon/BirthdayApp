@@ -13,6 +13,7 @@ export type RootStackParamList = {
   LastName: undefined;
   PhoneNumber: undefined;
   Birthday: undefined;
+  Reminder: undefined;
 };
 
 export type BottomTabParamList = {

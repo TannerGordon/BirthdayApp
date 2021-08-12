@@ -27,6 +27,7 @@ export const FirstName = ({ navigation }: any) => {
         <View style={styles.screenNumberFalse} />
         <View style={styles.screenNumberFalse} />
         <View style={styles.screenNumberFalse} />
+        <View style={styles.screenNumberFalse} />
       </View>
       <Text style={styles.subtitle}>welcome</Text>
       <Text style={styles.question}>What is your first name?</Text>

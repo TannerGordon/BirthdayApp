@@ -11,6 +11,7 @@ import { FirstName } from "../screens/StartScreens/FirstName";
 import { LastName } from "../screens/StartScreens/LastName";
 import { PhoneNumber } from "../screens/StartScreens/PhoneNumber";
 import { Birthday } from "../screens/StartScreens/Birthday";
+import { Reminder } from "../screens/StartScreens/Reminder";
 import TabOneScreen from "../screens/TabOneScreen";
 import { Title } from "react-native-paper";
 // import AppNavigator from "./AppNavigator";
@@ -133,6 +134,22 @@ export const RootNavigator = () => {
             <Stack.Screen
         name="Birthday"
         component={Birthday}
+        options={{
+          title: TITLE,
+          headerBackTitle: "",
+          headerTitleStyle: {
+            // fontWeight: "bold",
+            fontSize: 30,
+            fontFamily: "Marker Felt",
+          },
+          headerTintColor: "#E960FF",
+          headerStatusBarHeight: 40,
+          headerStyle: { elevation: 0, shadowColor: "transparent" },
+        }}
+      />
+                  <Stack.Screen
+        name="Reminder"
+        component={Reminder}
         options={{
           title: TITLE,
           headerBackTitle: "",

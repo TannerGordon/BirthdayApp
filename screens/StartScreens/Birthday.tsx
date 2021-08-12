@@ -27,6 +27,7 @@ export const Birthday = ({ navigation }: any) => {
         <View style={styles.screenNumberFalse} />
         <View style={styles.screenNumberFalse} />
         <View style={styles.screenNumberTrue} />
+        <View style={styles.screenNumberFalse} />
       </View>
       <Text style={styles.subtitle}>birthday!</Text>
       <Text style={styles.question}>What is your birthday?</Text>
@@ -37,10 +38,10 @@ export const Birthday = ({ navigation }: any) => {
           placeholderTextColor="#666666"
         />
       </View>
-      <TouchableOpacity style={styles.nextBtn}>
-        <Ionicons name="checkmark-outline" size={30} color="#E960FF" />
+      <TouchableOpacity style={styles.nextBtn} onPress={() => navigation.push("Reminder")}>
+        <Ionicons name="chevron-forward-outline" size={30} color="#E960FF" />
       </TouchableOpacity>
-      <Text style={styles.nextBtnText}>Finish</Text>
+      <Text style={styles.nextBtnText}>Next</Text>
     </View>
   );
 };
