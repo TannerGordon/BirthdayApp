@@ -11,6 +11,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
+import { Checkbox } from "react-native-paper";
 // import { connect } from "react-redux";
 // import { AppState, AppDispatch } from "../store";
 // import { RouteProp } from "@react-navigation/native";
@@ -26,19 +27,20 @@ import { Ionicons } from "@expo/vector-icons";
 //   navigation: StartPageNavigationProp;
 // };
 
-// const [CheckBox, setCheckBox] = useState();
+
 
 // var CheckBox = () => {
-
-// };
-
-const changeCheckbox = () => {
-
-};
-
-export const Reminder = ({ navigation }: any) => {
-  return (
-    <View style={styles.container}>
+  
+  // };
+  
+  
+  export const Reminder = ({ navigation }: any) => {
+    const [CheckBox, setCheckBox] = useState(false);
+    const changeCheckbox = () => {
+        setCheckBox(!CheckBox);
+    };
+    return (
+      <View style={styles.container}>
       <View style={styles.screenNumberContainer}>
         <View style={styles.screenNumberFalse} />
         <View style={styles.screenNumberFalse} />
@@ -49,10 +51,31 @@ export const Reminder = ({ navigation }: any) => {
       <Text style={styles.subtitle}>last question!</Text>
       <Text style={styles.question}>when would you like to be reminded about your friends' birthdays? (select all that apply)</Text>
       <View style={styles.checkItem}>
-        {/* <TouchableOpacity style={styles.checkbox} onPress={() => changeCheckbox(CheckBox)}>
+        <TouchableOpacity style={styles.checkbox} onPress={() => changeCheckbox()}>
+          {!CheckBox ? 
             <Ionicons name="checkmark-outline" size={20} color="white"/>
-        </TouchableOpacity> */}
+            : 
+            <Ionicons name="checkmark-outline" size={20} color="black"/>}
+        </TouchableOpacity>
         <Text style={styles.checkboxText}>On their birthday</Text>
+      </View>
+      <View style={styles.checkItem}>
+        <TouchableOpacity style={styles.checkbox} onPress={() => changeCheckbox()}>
+          {!CheckBox ? 
+            <Ionicons name="checkmark-outline" size={20} color="white"/>
+            : 
+            <Ionicons name="checkmark-outline" size={20} color="black"/>}
+        </TouchableOpacity>
+        <Text style={styles.checkboxText}>1 day before</Text>
+      </View>
+      <View style={styles.checkItem}>
+        <TouchableOpacity style={styles.checkbox} onPress={() => changeCheckbox()}>
+          {!CheckBox ? 
+            <Ionicons name="checkmark-outline" size={20} color="white"/>
+            : 
+            <Ionicons name="checkmark-outline" size={20} color="black"/>}
+        </TouchableOpacity>
+        <Text style={styles.checkboxText}>1 week before</Text>
       </View>
       <TouchableOpacity style={styles.nextBtn}>
         <Ionicons name="checkmark-outline" size={30} color="#E960FF" />
@@ -119,6 +142,7 @@ const styles = StyleSheet.create({
     // fontFamily: "Futura-Medium",
     fontWeight: "bold",
     color: "#282828",
+    marginBottom: 30,
   },
 
   answer: {
@@ -166,7 +190,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderColor: "#9C9C9C",
     borderWidth: 2,
-    marginVertical: 20,
+    marginVertical: 5,
     borderRadius: 10,
   },
 
@@ -176,6 +200,8 @@ const styles = StyleSheet.create({
     borderColor: "#9C9C9C",
     borderWidth: 2,
     margin: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   checkboxText: {
