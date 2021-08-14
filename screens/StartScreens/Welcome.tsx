@@ -31,7 +31,7 @@ export const Welcome = ({ navigation }: any) => {
         // colors={["white", "#B6B6B6 ", "white"]}
         colors={["#A22DFF", "#F1D3FF", "#FF83F3"]}
         // colors={["#F1D3FF", "#FF83F3", "#A22DFF"]}
-        start={{ x: 0.3, y: 0.0 }}
+        start={{ x: 0.0, y: 0.06 }}
         // end={{ x: 1, y: 1 }}
         style={styles.linearGradient}
       >

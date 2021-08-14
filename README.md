@@ -31,5 +31,6 @@ I am pretty bad at remembering my friends' birthdays and I've always wanted an a
 <a><img src="https://github.com/TannerGordon/BirthdayApp/blob/master/assets/images/screenshots/lastname.png" alt="Last Name Page" width="300"></a>
 <a><img src="https://github.com/TannerGordon/BirthdayApp/blob/master/assets/images/screenshots/phonenumber.png" alt="Phone Number Page" width="300"></a>
 <a><img src="https://github.com/TannerGordon/BirthdayApp/blob/master/assets/images/screenshots/birthday.png" alt="Birthday Page" width="300"></a>
+<a><img src="https://github.com/TannerGordon/BirthdayApp/blob/master/assets/images/screenshots/reminder.png" alt="Reminder Page" width="300"></a>
 
 <!-- make a gif that shows the start process -->

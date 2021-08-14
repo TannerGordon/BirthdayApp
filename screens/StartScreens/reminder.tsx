@@ -35,8 +35,14 @@ export const Reminder = ({ navigation }: any) => {
   const [CheckBox1, setCheckBox1] = useState(false);
   const [CheckBox2, setCheckBox2] = useState(false);
   const [CheckBox3, setCheckBox3] = useState(false);
+  const [checkColor, setCheckColor] = useState("white");
   const changeCheckbox = (cbox: boolean, setbox: Function) => {
     setbox(!cbox);
+    if (!cbox) {
+      setCheckColor("black");
+    } else {
+      setCheckColor("white");
+    }
   };
   return (
     <View style={styles.container}>
@@ -57,11 +63,11 @@ export const Reminder = ({ navigation }: any) => {
         onPress={() => changeCheckbox(CheckBox1, setCheckBox1)}
         activeOpacity={0.6}
       >
-        <View style={styles.checkbox}>
+        <View style={[styles.checkbox, { backgroundColor: checkColor }]}>
           {!CheckBox1 ? (
             <Ionicons name="checkmark-outline" size={20} color="white" />
           ) : (
-            <Ionicons name="checkmark-outline" size={20} color="black" />
+            <Ionicons name="checkmark-outline" size={20} color="#E960FF" />
           )}
         </View>
         <Text style={styles.checkboxText}>On their birthday</Text>
@@ -75,7 +81,7 @@ export const Reminder = ({ navigation }: any) => {
           {!CheckBox2 ? (
             <Ionicons name="checkmark-outline" size={20} color="white" />
           ) : (
-            <Ionicons name="checkmark-outline" size={20} color="black" />
+            <Ionicons name="checkmark-outline" size={20} color="#E960FF" />
           )}
         </View>
         <Text style={styles.checkboxText}>1 day before</Text>
@@ -89,7 +95,7 @@ export const Reminder = ({ navigation }: any) => {
           {!CheckBox3 ? (
             <Ionicons name="checkmark-outline" size={20} color="white" />
           ) : (
-            <Ionicons name="checkmark-outline" size={20} color="black" />
+            <Ionicons name="checkmark-outline" size={20} color="#E960FF" />
           )}
         </View>
         <Text style={styles.checkboxText}>1 week before</Text>
