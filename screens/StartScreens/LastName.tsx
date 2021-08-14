@@ -38,7 +38,10 @@ export const LastName = ({ navigation }: any) => {
           placeholderTextColor="#666666"
         />
       </View>
-      <TouchableOpacity style={styles.nextBtn} onPress={() => navigation.push("PhoneNumber")}>
+      <TouchableOpacity
+        style={styles.nextBtn}
+        onPress={() => navigation.push("PhoneNumber")}
+      >
         <Ionicons name="chevron-forward-outline" size={30} color="#E960FF" />
       </TouchableOpacity>
       <Text style={styles.nextBtnText}>Next</Text>

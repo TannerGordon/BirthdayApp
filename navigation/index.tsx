@@ -82,12 +82,11 @@ export const RootNavigator = () => {
             // textShadowRadius: 8,
             // letterSpacing: 3,
           },
-          headerTintColor: "#E960FF",
-          // headerTintColor: "black", 
+          headerTintColor: "#F094FF",
+          // headerTintColor: "white",
           headerStatusBarHeight: 40,
           headerStyle: { elevation: 0, shadowColor: "transparent" },
           headerTransparent: true,
-          
         }}
       />
       <Stack.Screen
@@ -106,7 +105,7 @@ export const RootNavigator = () => {
           headerStyle: { elevation: 0, shadowColor: "transparent" },
         }}
       />
-            <Stack.Screen
+      <Stack.Screen
         name="LastName"
         component={LastName}
         options={{
@@ -122,7 +121,7 @@ export const RootNavigator = () => {
           headerStyle: { elevation: 0, shadowColor: "transparent" },
         }}
       />
-            <Stack.Screen
+      <Stack.Screen
         name="PhoneNumber"
         component={PhoneNumber}
         options={{
@@ -138,7 +137,7 @@ export const RootNavigator = () => {
           headerStyle: { elevation: 0, shadowColor: "transparent" },
         }}
       />
-            <Stack.Screen
+      <Stack.Screen
         name="Birthday"
         component={Birthday}
         options={{
@@ -154,7 +153,7 @@ export const RootNavigator = () => {
           headerStyle: { elevation: 0, shadowColor: "transparent" },
         }}
       />
-                  <Stack.Screen
+      <Stack.Screen
         name="Reminder"
         component={Reminder}
         options={{
@@ -170,7 +169,7 @@ export const RootNavigator = () => {
           headerStyle: { elevation: 0, shadowColor: "transparent" },
         }}
       />
-      
+
       <Stack.Screen name="TabOneScreen" component={TabOneScreen} />
       {/* <Stack.Screen name="LoginNavigator" component={LoginNavigator} /> */}
       {/* <Stack.Screen name="Root" component={BottomTabNavigator} /> */}

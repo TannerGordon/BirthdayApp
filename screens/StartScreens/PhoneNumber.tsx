@@ -33,12 +33,18 @@ export const PhoneNumber = ({ navigation }: any) => {
       <Text style={styles.question}>What is your phone number?</Text>
       <View style={styles.answer}>
         <TextInput
+          dataDetectorTypes="phoneNumber"
+          keyboardType="number-pad"
           style={styles.answerText}
-          placeholder="Last name"
+          placeholder="Phone number"
           placeholderTextColor="#666666"
+          returnKeyType="done"
         />
       </View>
-      <TouchableOpacity style={styles.nextBtn} onPress={() => navigation.push("Birthday")}>
+      <TouchableOpacity
+        style={styles.nextBtn}
+        onPress={() => navigation.push("Birthday")}
+      >
         <Ionicons name="chevron-forward-outline" size={30} color="#E960FF" />
       </TouchableOpacity>
       <Text style={styles.nextBtnText}>Next</Text>
