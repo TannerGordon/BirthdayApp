@@ -4,6 +4,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
+import { FirstName } from "./FirstName";
 // import { connect } from "react-redux";
 // import { AppState, AppDispatch } from "../store";
 // import { RouteProp } from "@react-navigation/native";
@@ -19,7 +20,9 @@ import { Ionicons } from "@expo/vector-icons";
 //   navigation: StartPageNavigationProp;
 // };
 
-export const LastName = ({ navigation }: any) => {
+export const LastName = ({ navigation, route }: any) => {
+  const { firstName } = route.params;
+  const [lastName, setLastName] = useState("");
   return (
     <View style={styles.container}>
       <View style={styles.screenNumberContainer}>
@@ -36,11 +39,17 @@ export const LastName = ({ navigation }: any) => {
           style={styles.answerText}
           placeholder="Last name"
           placeholderTextColor="#666666"
+          onChangeText={(lastName) => setLastName(lastName)}
         />
       </View>
       <TouchableOpacity
         style={styles.nextBtn}
-        onPress={() => navigation.push("PhoneNumber")}
+        onPress={() =>
+          navigation.push("PhoneNumber", {
+            firstName: firstName,
+            lastName: lastName,
+          })
+        }
       >
         <Ionicons name="chevron-forward-outline" size={30} color="#E960FF" />
       </TouchableOpacity>

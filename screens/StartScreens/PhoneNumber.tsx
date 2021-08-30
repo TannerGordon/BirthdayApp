@@ -19,7 +19,9 @@ import { Ionicons } from "@expo/vector-icons";
 //   navigation: StartPageNavigationProp;
 // };
 
-export const PhoneNumber = ({ navigation }: any) => {
+export const PhoneNumber = ({ navigation, route }: any) => {
+  const { firstName, lastName } = route.params;
+  const [phoneNumber, setPhoneNumber] = useState("");
   return (
     <View style={styles.container}>
       <View style={styles.screenNumberContainer}>
@@ -39,11 +41,18 @@ export const PhoneNumber = ({ navigation }: any) => {
           placeholder="Phone number"
           placeholderTextColor="#666666"
           returnKeyType="done"
+          onChangeText={(phoneNumber) => setPhoneNumber(phoneNumber)}
         />
       </View>
       <TouchableOpacity
         style={styles.nextBtn}
-        onPress={() => navigation.push("Birthday")}
+        onPress={() =>
+          navigation.push("Birthday", {
+            firstName: firstName,
+            lastName: lastName,
+            phoneNumber: phoneNumber,
+          })
+        }
       >
         <Ionicons name="chevron-forward-outline" size={30} color="#E960FF" />
       </TouchableOpacity>

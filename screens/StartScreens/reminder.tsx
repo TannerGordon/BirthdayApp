@@ -11,7 +11,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
-import { Checkbox } from "react-native-paper";
+import { CheckBox } from "../../components/CheckBox";
 // import { connect } from "react-redux";
 // import { AppState, AppDispatch } from "../store";
 // import { RouteProp } from "@react-navigation/native";
@@ -31,7 +31,8 @@ import { Checkbox } from "react-native-paper";
 
 // };
 
-export const Reminder = ({ navigation }: any) => {
+export const Reminder = ({ navigation, route }: any) => {
+  const { firstName, lastName, phoneNumber, day, month, year } = route.params;
   const [CheckBox1, setCheckBox1] = useState(false);
   const [CheckBox2, setCheckBox2] = useState(false);
   const [CheckBox3, setCheckBox3] = useState(false);
@@ -44,6 +45,7 @@ export const Reminder = ({ navigation }: any) => {
       setCheckColor("white");
     }
   };
+  console.log(day, month, year);
   return (
     <View style={styles.container}>
       <View style={styles.screenNumberContainer}>
@@ -60,46 +62,33 @@ export const Reminder = ({ navigation }: any) => {
       </Text>
       <TouchableOpacity
         style={styles.checkItem}
-        onPress={() => changeCheckbox(CheckBox1, setCheckBox1)}
+        onPress={() => setCheckBox1(!CheckBox1)}
         activeOpacity={0.6}
       >
-        <View style={[styles.checkbox, { backgroundColor: checkColor }]}>
-          {!CheckBox1 ? (
-            <Ionicons name="checkmark-outline" size={20} color="white" />
-          ) : (
-            <Ionicons name="checkmark-outline" size={20} color="#E960FF" />
-          )}
-        </View>
+        <CheckBox selected={CheckBox1} />
         <Text style={styles.checkboxText}>On their birthday</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.checkItem}
-        onPress={() => changeCheckbox(CheckBox2, setCheckBox2)}
+        onPress={() => setCheckBox2(!CheckBox2)}
         activeOpacity={0.6}
       >
-        <View style={styles.checkbox}>
-          {!CheckBox2 ? (
-            <Ionicons name="checkmark-outline" size={20} color="white" />
-          ) : (
-            <Ionicons name="checkmark-outline" size={20} color="#E960FF" />
-          )}
-        </View>
+        <CheckBox selected={CheckBox2} />
         <Text style={styles.checkboxText}>1 day before</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.checkItem}
-        onPress={() => changeCheckbox(CheckBox3, setCheckBox3)}
+        onPress={() => setCheckBox3(!CheckBox3)}
         activeOpacity={0.6}
       >
-        <View style={styles.checkbox}>
-          {!CheckBox3 ? (
-            <Ionicons name="checkmark-outline" size={20} color="white" />
-          ) : (
-            <Ionicons name="checkmark-outline" size={20} color="#E960FF" />
-          )}
-        </View>
+        <CheckBox selected={CheckBox3} />
         <Text style={styles.checkboxText}>1 week before</Text>
       </TouchableOpacity>
+
+      {/* ADD CUSTOM BUTTON */}
+      {/* when clicked, it brings user to another page where the user can add more */}
+      {/* can finish from there, or if press back, have somewhere that includes */}
+      {/* the added dates */}
       <TouchableOpacity style={styles.nextBtn}>
         <Ionicons name="checkmark-outline" size={30} color="#E960FF" />
       </TouchableOpacity>

@@ -20,6 +20,7 @@ import { Ionicons } from "@expo/vector-icons";
 // };
 
 export const FirstName = ({ navigation }: any) => {
+  const [firstName, setFirstName] = useState("");
   return (
     <View style={styles.container}>
       <View style={styles.screenNumberContainer}>
@@ -36,11 +37,12 @@ export const FirstName = ({ navigation }: any) => {
           style={styles.answerText}
           placeholder="First name"
           placeholderTextColor="#666666"
+          onChangeText={(firstName) => setFirstName(firstName)}
         />
       </View>
       <TouchableOpacity
         style={styles.nextBtn}
-        onPress={() => navigation.push("LastName")}
+        onPress={() => navigation.push("LastName", { firstName: firstName })}
       >
         <Ionicons name="chevron-forward-outline" size={30} color="#E960FF" />
       </TouchableOpacity>

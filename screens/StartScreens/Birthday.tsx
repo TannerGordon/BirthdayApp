@@ -11,6 +11,7 @@ import { TextInput } from "react-native-gesture-handler";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 import DateTimePicker from "@react-native-community/datetimepicker";
+import moment from "moment";
 // import { connect } from "react-redux";
 // import { AppState, AppDispatch } from "../store";
 // import { RouteProp } from "@react-navigation/native";
@@ -26,25 +27,18 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 //   navigation: StartPageNavigationProp;
 // };
 
-export const Birthday = ({ navigation }: any) => {
-  const [date, setDate] = useState(new Date(2000, 0, 1));
-  const [mode, setMode] = useState("date");
-  const [show, setShow] = useState(false);
+export const Birthday = ({ navigation, route }: any) => {
+  const { firstName, lastName, phoneNumber } = route.params;
+  const [date, setDate] = useState(new Date(1999, 10, 18));
+  const [month, day, year] = [
+    date.getMonth() + 1,
+    date.getDate(),
+    date.getFullYear(),
+  ];
 
   const onChange = (event: any, selectedDate: any) => {
     const currentDate = selectedDate || date;
-    setShow(Platform.OS === "ios");
     setDate(currentDate);
-  };
-
-  const showDatepicker = () => {
-    showMode("date");
-    console.log(date);
-  };
-
-  const showMode = (currentMode: any) => {
-    setShow(true);
-    setMode(currentMode);
   };
 
   return (
@@ -69,7 +63,16 @@ export const Birthday = ({ navigation }: any) => {
       />
       <TouchableOpacity
         style={styles.nextBtn}
-        onPress={() => navigation.push("Reminder")}
+        onPress={() => {
+          navigation.push("Reminder", {
+            firstName: firstName,
+            lastName: lastName,
+            phoneNumber: phoneNumber,
+            month: month,
+            day: day,
+            year: year,
+          });
+        }}
       >
         <Ionicons name="chevron-forward-outline" size={30} color="#E960FF" />
       </TouchableOpacity>

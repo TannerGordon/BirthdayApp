@@ -10,7 +10,7 @@ export type RootStackParamList = {
   TabOneScreen: undefined;
   FirstName: undefined;
   Welcome: undefined;
-  LastName: undefined;
+  LastName: { firstName: string };
   PhoneNumber: undefined;
   Birthday: undefined;
   Reminder: undefined;

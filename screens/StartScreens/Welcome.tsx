@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
 
   linearGradient: {
     width: "100%",
-    height: "100Q%",
+    height: "100%",
     // paddingLeft: 15,
     // paddingRight: 15,
     // borderRadius: 5
