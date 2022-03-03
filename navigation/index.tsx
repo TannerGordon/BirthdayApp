@@ -21,6 +21,7 @@ import { Title } from "react-native-paper";
 // import { AccountState, loginUser } from "../store/slices/accountSlice";
 
 const TITLE = "Birthday!";
+// const TITLE = "";
 
 const Stack = createStackNavigator<RootStackParamList>();
 

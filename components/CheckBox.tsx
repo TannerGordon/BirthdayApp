@@ -13,7 +13,7 @@ export const CheckBox = ({ selected }: CheckBoxProps) => {
   if (selected) {
     return (
       <View style={styles.checkboxFilled}>
-        <Ionicons name="checkmark-outline" size={20} color="#E960FF" />
+        <Ionicons name="checkmark" size={20} color="black" />
       </View>
     );
   } else {
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   checkItem: {
     width: "100%",
     flexDirection: "row",
-    borderColor: "#9C9C9C",
+    borderColor: "#E960FF",
     borderWidth: 2,
     marginVertical: 5,
     borderRadius: 10,
@@ -34,22 +34,24 @@ const styles = StyleSheet.create({
   checkboxEmpty: {
     width: 30,
     height: 30,
-    borderColor: "#9C9C9C",
+    borderColor: "black",
     borderWidth: 2,
     margin: 10,
     justifyContent: "center",
     alignItems: "center",
+    borderRadius: 100,
   },
 
   checkboxFilled: {
     width: 30,
     height: 30,
-    borderColor: "#9C9C9C",
+    borderColor: "black",
     borderWidth: 2,
     margin: 10,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "black",
+    backgroundColor: "#E960FF",
+    borderRadius: 100,
   },
 
   checkboxText: {
@@ -58,3 +60,4 @@ const styles = StyleSheet.create({
     fontFamily: "Futura",
   },
 });
+

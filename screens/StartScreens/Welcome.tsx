@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
 
   nextBtn: {
     borderRadius: 35,
-    marginTop: 110,
+    marginTop: "50%",
     backgroundColor: "#282828",
     width: 130,
     height: 70,
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
   },
 
   icon_round: {
-    margin: 50,
+    margin: "10%",
     width: 90,
     height: 90,
     resizeMode: "stretch",
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
 
   title: {
     fontSize: 60,
-    marginTop: 20,
+    marginTop: "45%",
     fontFamily: "Avenir",
   },
 
